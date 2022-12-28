@@ -25,7 +25,7 @@ RUN bash install-nix.sh
 
 # Change 
 RUN wget https://apt.metasploit.com/pool/main/m/metasploit-framework/metasploit-framework_6.2.33%2B20221227112617~1rapid7-1_amd64.deb
-RUN dpkg -i metasploit-framework_6.2.33%2B20221227112617~1rapid7-1_amd64.deb
+RUN dpkg -i metasploit-framework_6.2.33+20221227112617~1rapid7-1_amd64.deb
 
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install openssh-server -yq
 COPY ./sshd_config /etc/ssh/
