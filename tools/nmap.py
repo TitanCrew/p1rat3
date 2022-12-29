@@ -5,7 +5,8 @@ import xml.etree.ElementTree as ET
 
 def parse(json_string):
     data = json.loads(json_string)
-    final_command = 'sudo nmap -oX data/scan/nmap/initial.xml -Pn'
+    # final_command = 'sudo nmap -oX data/scan/nmap/initial.xml -Pn'
+    final_command = f"sudo rustscan -a {data['target']} -- -O -sV -sC -oX data/scan/nmap/initial.xml"
 
     # TCP SYN scan
     if data['sS'] == '1':
@@ -23,7 +24,7 @@ def parse(json_string):
     if data['O'] == '1':
         final_command += " -O"
 
-    final_command += f" {data['target']}"
+
     return final_command
 
 
@@ -34,13 +35,18 @@ def run_command(command):
 def parse_output():
     return_json = [[]]
     tree = ET.parse('data/scan/nmap/initial.xml')
+    # tree = ET.parse('/Users/jithendranadh/initial.xml')
+
     root = tree.getroot()
     ports = root.findall('./host/ports/port')
     os_details = root.findall('./host/os/osmatch')
 
     for port in ports:
         temp_block = {"port": "", "protocol": "", "state": "", "service": "", "version": "", "product": ""}
-        service_attrib = port.find('service').attrib
+        try:
+            service_attrib = port.find('service').attrib
+        except AttributeError:
+            continue
 
         try:
             temp_block['service'] = service_attrib['name']
@@ -118,13 +124,6 @@ def parse_output():
     return return_json
 
 
-run_command(parse("""{
-"sS": "0",
-"sU": "0",
-"sV": "1",
-"O": "1",
-"target": "localhost"
-}
-"""))
+run_command(parse("""{"sS": "0","sU": "0","sV": "0","O": "0","target": "10.10.186.178"}"""))
 
 print(parse_output())
