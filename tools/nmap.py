@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 def parse(json_string):
     data = json.loads(json_string)
     # final_command = 'sudo nmap -oX data/scan/nmap/initial.xml -Pn'
+
     final_command = f"sudo rustscan -a {data['target']} -- -O -sV -sC -oX data/scan/nmap/initial.xml"
 
     # TCP SYN scan

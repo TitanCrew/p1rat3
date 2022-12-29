@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>p1rat3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
-
+<p>P1RAT3</p>
+<form class="myForm" action="/analyze" method="post">
+    <input class="inpBox" name="data" type="text"/>
+    <input class="subBtn" type="submit"/>
+</form>
 
 </body>
 </html>
