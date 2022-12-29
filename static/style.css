@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Sora&family=Varela+Round&display=swap');
+
+:root {
+    --button-color: rgb(159, 255, 196);
+    --text-color: rgb(70, 70, 70);
+    --inp-border: rgb(159, 255, 159);
+    --body-bg: rgb(15, 15, 15);
+    --button-shadow: rgb(172, 255, 172);
+}
+
+body {
+    position: relative;
+    margin: 0px; padding: 0px;
+    height: 100vh; width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: var(--body-bg);
+}
+
+p {
+    font-size: 100px;
+    color: white;
+    text-shadow: 0px 0px 12px rgb(126, 255, 126);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inpBox, .subBtn {
+    margin: 10px;
+}
+
+.inpBox {
+    padding: 10px;
+    outline: none;
+    border: solid 2px var(--inp-border);
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.subBtn {
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.subBtn:hover {
+    box-shadow: 0px 0px 10px var(--button-shadow);
+}
