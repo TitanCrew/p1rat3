@@ -7,10 +7,18 @@
 </head>
 <body>
 <p>P1RAT3</p>
-<form class="myForm" action="/analyze" method="post">
+<form class="myForm" id="inpForm" action="/result" method="post">
     <input class="inpBox" name="data" type="text"/>
-    <input class="subBtn" type="submit"/>
+    <input onclick="showLoading()" class="subBtn" type="submit"/>
 </form>
-
+<div class="loading" id="loadingSpan">
+    Scanning
+</div>
+<script>
+    const showLoading = () => {
+        document.getElementById("loadingSpan").style.display = "block";
+        document.getElementById("inpForm").style.display = "none";
+    }
+</script>
 </body>
 </html>
