@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 
 def parse(json_string):
-    data = json.loads(json_string)
+    data = json_string
     # final_command = 'sudo nmap -oX data/scan/nmap/initial.xml -Pn'
 
     final_command = f"sudo rustscan -a {data['target']} -- -O -sV -sC -oX data/scan/nmap/initial.xml"
@@ -124,7 +124,6 @@ def parse_output():
 
     return return_json
 
-
-run_command(parse("""{"sS": "0","sU": "0","sV": "0","O": "0","target": "10.10.186.178"}"""))
-
-print(parse_output())
+if __name__ == "__main__":
+    run_command(parse("""{"sS": "0","sU": "0","sV": "0","O": "0","target": "10.10.138.253"}"""))
+    print(parse_output())
