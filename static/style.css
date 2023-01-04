@@ -6,6 +6,8 @@
     --inp-border: rgb(159, 255, 159);
     --body-bg: rgb(15, 15, 15);
     --button-shadow: rgb(172, 255, 172);
+    --nmap-head: rgb(118, 255, 118);
+    --os-color: rgb(85, 255, 156);
 }
 
 body {
@@ -19,7 +21,7 @@ body {
     background-color: var(--body-bg);
 }
 
-p {
+.toolName {
     font-size: 100px;
     color: white;
     text-shadow: 0px 0px 12px rgb(126, 255, 126);
@@ -80,4 +82,56 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     animation: blinker 2s linear infinite;
+}
+
+.mainContainer {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scans {
+    position: relative;
+    height: min-content;
+    margin: 20px;
+    width: min-content;
+}
+
+.osScan p {
+    width: max-content;
+    color: var(--os-color);
+    font-size: 25px;
+}
+
+.title {
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.nmap-title {
+    background-color: var(--nmap-head);
+}
+
+.resContainer {
+    padding: 20px;
+    border: solid 5px var(--nmap-head);
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indPortInfo {
+    padding: 10px;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
 }

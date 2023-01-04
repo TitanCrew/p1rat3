@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Result</title>
 </head>
 <body>
-    <h1>{{ osInfo }}</h1>
-    {% for value in portInfo %}
-    
-    <h2>{{ value }}</h2>
-
-    {% endfor %}
+    <div class="mainContainer">
+        <div class="osScan scans">
+            <p class="title">Detected OS :- {{ osInfo['os'] }}</p>
+        </div>
+        <div class="nmapScan scans">
+            <p class="title nmap-title">Nmap Scan results</p>
+            <div class="resContainer">
+                <!-- {'port': '21', 'protocol': 'tcp', 'state': 'open', 'service': 'ftp', 'version': '3.0.3', 'product': 'vsftpd'} -->
+                {% for indPort in portInfo %}
+                <div class="indPortInfo">
+                    <div>Port: {{ indPort['port'] }}</div>
+                    <div>Protocol: {{ indPort['protocol'] }}</div>
+                    <div>State: {{ indPort['state'] }}</div>
+                    <div>Service: {{ indPort['service'] }}</div>
+                    <div>Version: {{ indPort['version'] }}</div>
+                    <div>Product: {{ indPort['product'] }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>
