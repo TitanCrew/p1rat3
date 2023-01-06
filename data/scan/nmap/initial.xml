@@ -1,126 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
-<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.92 scan initiated Tue Jan  3 12:41:11 2023 as: nmap -vvv -p 21,80,10000,55007 -O -sV -sC -oX data/scan/nmap/initial.xml 10.10.125.172 -->
-<nmaprun scanner="nmap" args="nmap -vvv -p 21,80,10000,55007 -O -sV -sC -oX data/scan/nmap/initial.xml 10.10.125.172" start="1672767671" startstr="Tue Jan  3 12:41:11 2023" version="7.92" xmloutputversion="1.05">
-<scaninfo type="syn" protocol="tcp" numservices="4" services="21,80,10000,55007"/>
+<?xml-stylesheet href="file:///opt/homebrew/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Fri Jan  6 19:36:40 2023 as: nmap -vvv -p 445,3689,5000,6942,7000,8000,52990,57465,63342 -Pn -O -sV -sC -oX data/scan/nmap/initial.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 445,3689,5000,6942,7000,8000,52990,57465,63342 -Pn -O -sV -sC -oX data/scan/nmap/initial.xml 127.0.0.1" start="1673014000" startstr="Fri Jan  6 19:36:40 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="9" services="445,3689,5000,6942,7000,8000,52990,57465,63342"/>
 <verbose level="3"/>
 <debugging level="0"/>
-<taskbegin task="NSE" time="1672767671"/>
-<taskend task="NSE" time="1672767671"/>
-<taskbegin task="NSE" time="1672767671"/>
-<taskend task="NSE" time="1672767671"/>
-<taskbegin task="NSE" time="1672767671"/>
-<taskend task="NSE" time="1672767671"/>
-<taskbegin task="Ping Scan" time="1672767672"/>
-<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
-<address addr="10.10.125.172" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-</hosthint>
-<taskend task="Ping Scan" time="1672767672" extrainfo="1 total hosts"/>
-<taskbegin task="Parallel DNS resolution of 1 host." time="1672767672"/>
-<taskend task="Parallel DNS resolution of 1 host." time="1672767672"/>
-<taskbegin task="SYN Stealth Scan" time="1672767672"/>
-<taskend task="SYN Stealth Scan" time="1672767672" extrainfo="4 total ports"/>
-<taskbegin task="Service scan" time="1672767673"/>
-<taskend task="Service scan" time="1672767680" extrainfo="4 services on 1 host"/>
-<taskbegin task="NSE" time="1672767688"/>
-<taskprogress task="NSE" time="1672767719" percent="99.82" remaining="1" etc="1672767719"/>
-<taskend task="NSE" time="1672767727"/>
-<taskbegin task="NSE" time="1672767727"/>
-<taskend task="NSE" time="1672767730"/>
-<taskbegin task="NSE" time="1672767730"/>
-<taskend task="NSE" time="1672767730"/>
-<host starttime="1672767672" endtime="1672767730"><status state="up" reason="timestamp-reply" reason_ttl="61"/>
-<address addr="10.10.125.172" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
-<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD POST OPTIONS"><table key="Supported Methods">
-<elem>HEAD</elem>
-<elem>POST</elem>
-<elem>OPTIONS</elem>
-</table>
-</script><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
-</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
-</script></port>
-<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" product="MiniServ" version="1.930" extrainfo="Webmin httpd" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: POST OPTIONS"><table key="Supported Methods">
-<elem>POST</elem>
-<elem>OPTIONS</elem>
-</table>
-</script><script id="http-favicon" output="Unknown favicon MD5: 4B491070B4724D20419D3DBED44B0C99"/></port>
-<port protocol="tcp" portid="55007"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.8" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 e3:ab:e1:39:2d:95:eb:13:55:16:d6:ce:8d:f9:11:e5 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8bsvFyC4EXgZIlLR/7o9EHosUTTGJKIdjtMUyYrhUpJiEdUahT64rItJMCyO47iZTR5wkQx2H8HThHT6iQ5GlMzLGWFSTL1ttIulcg7uyXzWhJMiG/0W4HNIR44DlO8zBvysLRkBSCUEdD95kLABPKxIgCnYqfS3D73NJI6T2qWrbCTaIG5QAS5yAyPERXXz3ofHRRiCr3fYHpVopUbMTWZZDjR3DKv7IDsOCbMKSwmmgdfxDhFIBRtCkdiUdGJwP/g0uEUtHbSYsNZbc1s1a5EpaxvlESKPBainlPlRkqXdIiYuLvzsf2J0ajniPUkvJ2JbC8qm7AaDItepXLoDt&#xa;  256 ae:de:f2:bb:b7:8a:00:70:20:74:56:76:25:c0:df:38 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLIDkrDNUoTTfKoucY3J3eXFICcitdce9/EOdMn8/7ZrUkM23RMsmFncOVJTkLOxOB+LwOEavTWG/pqxKLpk7oc=&#xa;  256 25:25:83:f2:a7:75:8a:a0:46:b2:12:70:04:68:5c:cb (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPsAMyp7Cf1qf50P6K9P2n30r4MVz09NnjX7LvcKgG2p"><table>
-<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC8bsvFyC4EXgZIlLR/7o9EHosUTTGJKIdjtMUyYrhUpJiEdUahT64rItJMCyO47iZTR5wkQx2H8HThHT6iQ5GlMzLGWFSTL1ttIulcg7uyXzWhJMiG/0W4HNIR44DlO8zBvysLRkBSCUEdD95kLABPKxIgCnYqfS3D73NJI6T2qWrbCTaIG5QAS5yAyPERXXz3ofHRRiCr3fYHpVopUbMTWZZDjR3DKv7IDsOCbMKSwmmgdfxDhFIBRtCkdiUdGJwP/g0uEUtHbSYsNZbc1s1a5EpaxvlESKPBainlPlRkqXdIiYuLvzsf2J0ajniPUkvJ2JbC8qm7AaDItepXLoDt</elem>
-<elem key="type">ssh-rsa</elem>
-<elem key="fingerprint">e3abe1392d95eb135516d6ce8df911e5</elem>
-<elem key="bits">2048</elem>
-</table>
-<table>
-<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLIDkrDNUoTTfKoucY3J3eXFICcitdce9/EOdMn8/7ZrUkM23RMsmFncOVJTkLOxOB+LwOEavTWG/pqxKLpk7oc=</elem>
-<elem key="type">ecdsa-sha2-nistp256</elem>
-<elem key="fingerprint">aedef2bbb78a00702074567625c0df38</elem>
-<elem key="bits">256</elem>
-</table>
-<table>
-<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPsAMyp7Cf1qf50P6K9P2n30r4MVz09NnjX7LvcKgG2p</elem>
-<elem key="type">ssh-ed25519</elem>
-<elem key="fingerprint">252583f2a7758aa046b2127004685ccb</elem>
-<elem key="bits">256</elem>
-</table>
-</script></port>
-</ports>
-<os><portused state="open" proto="tcp" portid="21"/>
-<portused state="closed" proto="udp" portid="37144"/>
-<osmatch name="Linux 3.10 - 3.13" accuracy="95" line="63361">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 5.4" accuracy="95" line="68161">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5.4</cpe></osclass>
-</osmatch>
-<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="95" line="8401">
-<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="95"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
-<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 3.16" accuracy="95" line="64174">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 3.1" accuracy="93" line="62920">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 3.2" accuracy="93" line="64667">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
-</osmatch>
-<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="92" line="61818">
-<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
-<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="92"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
-</osmatch>
-<osmatch name="Sony Android TV (Android 5.0)" accuracy="92" line="31474">
-<osclass type="media device" vendor="Google" osfamily="Android" osgen="5.X" accuracy="92"><cpe>cpe:/o:google:android:5.0</cpe></osclass>
-</osmatch>
-<osmatch name="Android 5.0 - 6.0.1 (Linux 3.4)" accuracy="92" line="31515">
-<osclass type="phone" vendor="Google" osfamily="Android" osgen="5.X" accuracy="92"><cpe>cpe:/o:google:android:5</cpe></osclass>
-<osclass type="phone" vendor="Google" osfamily="Android" osgen="6.X" accuracy="92"><cpe>cpe:/o:google:android:6</cpe></osclass>
-<osclass type="phone" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
-</osmatch>
-<osmatch name="Android 5.1" accuracy="92" line="31623">
-<osclass type="phone" vendor="Google" osfamily="Android" osgen="5.X" accuracy="92"><cpe>cpe:/o:google:android:5.1</cpe></osclass>
-</osmatch>
-<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=1/3%OT=21%CT=%CU=37144%PV=Y%DS=4%DC=I%G=N%TM=63B468F2%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=10A%TI=Z%II=I%TS=8)&#xa;SEQ(SP=105%GCD=1%ISR=10A%TI=Z%CI=I%II=I%TS=8)&#xa;OPS(O1=M506ST11NW6%O2=M506ST11NW6%O3=M506NNT11NW6%O4=M506ST11NW6%O5=M506ST11NW6%O6=M506ST11)&#xa;WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)&#xa;ECN(R=Y%DF=Y%T=40%W=6903%O=M506NNSNW6%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
-</os>
-<uptime seconds="994" lastboot="Tue Jan  3 12:25:36 2023"/>
-<distance value="4"/>
-<tcpsequence index="261" difficulty="Good luck!" values="B834C934,8EED22F9,20AB597B,BD2597CF,A277E202,834BB17E"/>
-<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
-<tcptssequence class="other" values="3AADA,3AAF1,3AB11,3AB23,3AB3B,3AB59"/>
-<times srtt="362304" rttvar="13824" to="417600"/>
-</host>
-<taskbegin task="NSE" time="1672767730"/>
-<taskend task="NSE" time="1672767730"/>
-<taskbegin task="NSE" time="1672767730"/>
-<taskend task="NSE" time="1672767730"/>
-<taskbegin task="NSE" time="1672767730"/>
-<taskend task="NSE" time="1672767730"/>
-<runstats><finished time="1672767730" timestr="Tue Jan  3 12:42:10 2023" summary="Nmap done at Tue Jan  3 12:42:10 2023; 1 IP address (1 host up) scanned in 59.04 seconds" elapsed="59.04" exit="success"/><hosts up="1" down="0" total="1"/>
-</runstats>
-</nmaprun>
+<taskbegin task="NSE" time="1673014000"/>
+<taskend task="NSE" time="1673014000"/>
+<taskbegin task="NSE" time="1673014000"/>
+<taskend task="NSE" time="1673014000"/>
+<taskbegin task="NSE" time="1673014000"/>
+<taskend task="NSE" time="1673014000"/>
+<taskbegin task="SYN Stealth Scan" time="1673014001"/>
+<taskend task="SYN Stealth Scan" time="1673014001" extrainfo="9 total ports"/>
+<taskbegin task="Service scan" time="1673014001"/>
