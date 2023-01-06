@@ -125,5 +125,5 @@ def parse_output():
     return return_json
 
 if __name__ == "__main__":
-    run_command(parse("""{"sS": "0","sU": "0","sV": "0","O": "0","target": "10.10.138.253"}"""))
+    run_command(parse({"sS": "0","sU": "0","sV": "0","O": "0","target": "10.10.138.253"}))
     print(parse_output())

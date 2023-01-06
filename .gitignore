@@ -5,3 +5,7 @@ tools/.DS_Store
 tools/data/.DS_Store
 tools/data/scan/.DS_Store
 .DS_Store
+.DS_Store
+.DS_Store
+.DS_Store
+*.pyc
