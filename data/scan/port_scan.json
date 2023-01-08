@@ -1,0 +1,303 @@
+{
+    "nmaprun": {
+        "@scanner": "nmap",
+        "@args": "nmap -vvv -p 21,25,80,143,110,443,5060,8008,8010,8015,8020 -Pn -O -sV -oX data/scan/nmap.xml 40.80.91.197",
+        "@start": "1673192738",
+        "@startstr": "Sun Jan  8 21:15:38 2023",
+        "@version": "7.93",
+        "@xmloutputversion": "1.05",
+        "scaninfo": {
+            "@type": "syn",
+            "@protocol": "tcp",
+            "@numservices": "11",
+            "@services": "21,25,80,110,143,443,5060,8008,8010,8015,8020"
+        },
+        "verbose": {
+            "@level": "3"
+        },
+        "debugging": {
+            "@level": "0"
+        },
+        "taskbegin": [
+            {
+                "@task": "Parallel DNS resolution of 1 host.",
+                "@time": "1673192738"
+            },
+            {
+                "@task": "SYN Stealth Scan",
+                "@time": "1673192738"
+            },
+            {
+                "@task": "Service scan",
+                "@time": "1673192738"
+            },
+            {
+                "@task": "NSE",
+                "@time": "1673192907"
+            },
+            {
+                "@task": "NSE",
+                "@time": "1673192931"
+            }
+        ],
+        "taskend": [
+            {
+                "@task": "Parallel DNS resolution of 1 host.",
+                "@time": "1673192738"
+            },
+            {
+                "@task": "SYN Stealth Scan",
+                "@time": "1673192738",
+                "@extrainfo": "11 total ports"
+            },
+            {
+                "@task": "Service scan",
+                "@time": "1673192902",
+                "@extrainfo": "11 services on 1 host"
+            },
+            {
+                "@task": "NSE",
+                "@time": "1673192931"
+            },
+            {
+                "@task": "NSE",
+                "@time": "1673192939"
+            }
+        ],
+        "taskprogress": {
+            "@task": "Service scan",
+            "@time": "1673192877",
+            "@percent": "45.45",
+            "@remaining": "167",
+            "@etc": "1673193044"
+        },
+        "host": {
+            "@starttime": "1673192738",
+            "@endtime": "1673192939",
+            "status": {
+                "@state": "up",
+                "@reason": "user-set",
+                "@reason_ttl": "0"
+            },
+            "address": {
+                "@addr": "40.80.91.197",
+                "@addrtype": "ipv4"
+            },
+            "hostnames": null,
+            "ports": {
+                "port": [
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "21",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "ftp",
+                            "@product": "FortiGate Application filtering",
+                            "@method": "probed",
+                            "@conf": "10"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "25",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "smtp",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "80",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "http",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "110",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "pop3",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "143",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "imap",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "443",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "http",
+                            "@product": "Apache httpd",
+                            "@version": "2.4.6",
+                            "@extrainfo": "(CentOS) OpenSSL/1.0.2k-fips PHP/7.4.30",
+                            "@tunnel": "ssl",
+                            "@method": "probed",
+                            "@conf": "10",
+                            "cpe": "cpe:/a:apache:http_server:2.4.6"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "5060",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "sip",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "8008",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "http",
+                            "@servicefp": "SF-Port8008-TCP:V=7.93%I=7%D=1/8%Time=63BAE528%P=arm-apple-darwin22.1.0%r(GetRequest,CC,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015/\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\")%r(FourOhFourRequest,EF,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015/nice%20ports%2C/Tri%6Eity\\.txt%2ebak\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\")%r(GenericLines,CB,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\")%r(HTTPOptions,CB,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\")%r(RTSPRequest,CB,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\")%r(SIPOptions,CB,\"HTTP/1\\.1\\x20302\\x20Found\\r\\nLocation:\\x20https://:8015\\r\\nConnection:\\x20close\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nX-Content-Type-Options:\\x20nosniff\\r\\nContent-Security-Policy:\\x20frame-ancestors\\r\\n\\r\\n\");",
+                            "@method": "probed",
+                            "@conf": "10"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "8010",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "http-proxy",
+                            "@product": "FortiGate Web Filtering Service",
+                            "@tunnel": "ssl",
+                            "@method": "probed",
+                            "@conf": "10"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "8015",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "cfg-cloud",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "8020",
+                        "state": {
+                            "@state": "open",
+                            "@reason": "syn-ack",
+                            "@reason_ttl": "63"
+                        },
+                        "service": {
+                            "@name": "http-proxy",
+                            "@product": "FortiGate Web Filtering Service",
+                            "@method": "probed",
+                            "@conf": "10"
+                        }
+                    }
+                ]
+            },
+            "os": {
+                "portused": {
+                    "@state": "open",
+                    "@proto": "tcp",
+                    "@portid": "21"
+                },
+                "osfingerprint": {
+                    "@fingerprint": "SCAN(V=7.93%E=4%D=1/8%OT=21%CT=%CU=%PV=N%G=N%TM=63BAE5EB%P=arm-apple-darwin22.1.0)\nSEQ(SP=105%GCD=1%ISR=10B%TS=7)\nOPS(O1=M23D8ST11NW9%O2=M23D8ST11NW9%O3=M23D8NNT11NW9%O4=M23D8ST11NW9%O5=M23D8ST11NW9%O6=M23D8ST11)\nWIN(W1=4798%W2=4798%W3=4798%W4=4798%W5=4798%W6=4798)\nECN(R=Y%DF=N%TG=40%W=47B0%O=M23D8NNSNW9%CC=Y%Q=)\nT1(R=Y%DF=N%TG=40%S=O%A=S+%F=AS%RD=0%Q=)\nT2(R=N)\nT3(R=N)\nT4(R=N)\nU1(R=N)\nIE(R=N)\n"
+                }
+            },
+            "uptime": {
+                "@seconds": "1050277",
+                "@lastboot": "Tue Dec 27 17:34:22 2022"
+            },
+            "tcpsequence": {
+                "@index": "261",
+                "@difficulty": "Good luck!",
+                "@values": "48B1DA4B,5B94E80A,D1318DEF,8ED3ED9F,B1819DF1,EF18E30"
+            },
+            "ipidsequence": {
+                "@class": "Busy server or unknown class",
+                "@values": "E5E2,E5E3,E5EE,E609,E60A,E612"
+            },
+            "tcptssequence": {
+                "@class": "100HZ",
+                "@values": "6428B70,6428B7A,6428B84,6428B8E,6428B99,6428BA3"
+            },
+            "times": {
+                "@srtt": "4618",
+                "@rttvar": "687",
+                "@to": "100000"
+            }
+        },
+        "runstats": {
+            "finished": {
+                "@time": "1673192939",
+                "@timestr": "Sun Jan  8 21:18:59 2023",
+                "@summary": "Nmap done at Sun Jan  8 21:18:59 2023; 1 IP address (1 host up) scanned in 201.67 seconds",
+                "@elapsed": "201.67",
+                "@exit": "success"
+            },
+            "hosts": {
+                "@up": "1",
+                "@down": "0",
+                "@total": "1"
+            }
+        }
+    }
+}
