@@ -8,17 +8,21 @@
     --button-shadow: rgb(172, 255, 172);
     --nmap-head: rgb(118, 255, 118);
     --os-color: rgb(85, 255, 156);
+    --wapp-head: rgb(223, 183, 255);
+    --no-vuln: rgb(167, 255, 167);
+    --vuln: rgb(255, 107, 107);
 }
 
 body {
     position: relative;
     margin: 0px; padding: 0px;
-    height: 100vh; width: 100vw;
+    min-height: 100vh; width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
     background-color: var(--body-bg);
+    overflow-x: hidden;
 }
 
 .toolName {
@@ -95,9 +99,13 @@ body {
 
 .scans {
     position: relative;
-    height: min-content;
+    height: max-content;
     margin: 20px;
     width: min-content;
+}
+
+.nmapScan {
+    width: 1200px;
 }
 
 .osScan p {
@@ -117,25 +125,54 @@ body {
     border-top-right-radius: 15px;
 }
 
+#resTitle {
+    position: fixed;
+    left: 40px; top: 5px;
+    color: white;
+    text-shadow: 0px 0px 12px rgb(126, 255, 126);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 30px;
+}
+
 .nmap-title {
     background-color: var(--nmap-head);
 }
 
+.wapp-title {
+    background-color: var(--wapp-head);
+}
+
 .resContainer {
     padding: 20px;
-    border: solid 5px var(--nmap-head);
+    border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;
     background-color: aliceblue;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
+.nmapCont {
+    border: solid 5px var(--nmap-head);
+    border-bottom: solid 20px var(--nmap-head);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wappCont {
+    position: relative;
+    border: solid 5px var(--wapp-head);
+    border-bottom: solid 20px var(--wapp-head);
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+}
+
 .indPortInfo {
     padding: 10px;
-    width: 300px;
+    min-width: 300px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    border: solid 1px gray;
+    border-radius: 10px;
 }
 
 .indPortInfo > div {
@@ -151,9 +188,10 @@ body {
 
 .prodInfo {
     padding: 5px;
-    background-color: rgb(203, 255, 227);
+    background-color: rgb(255, 245, 203);
     border-radius: 10px;
     color: var(--text-color);
+    width: max-content;
 }
 
 .child {
@@ -162,5 +200,23 @@ body {
 
 .mainInfo {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+}
+
+.indWappInfo {
+    position: relative;
+    width: 20px;
+    flex: 1 0 20%;
+    margin: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color)
+}
+
+.version {
+    margin-left: 5px;
+    background-color: var(--no-vuln);
+    padding: 5px 10px 5px 10px;
+    border-radius: 99px;
+    font-size: 15px;
+    color: var(--text-color);
 }
