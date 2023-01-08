@@ -88,7 +88,7 @@ body {
     position: relative;
     width: 100%; height: 100%;
     display: flex;
-    justify-content: top;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -126,6 +126,7 @@ body {
     border: solid 5px var(--nmap-head);
     background-color: aliceblue;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -134,4 +135,32 @@ body {
     padding: 10px;
     width: 300px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.indPortInfo > div {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+
+.indPortInfo > div > div > p {
+    margin: 0px;
+    margin-left: 10px;
+    color: var(--text-color);
+}
+
+.prodInfo {
+    padding: 5px;
+    background-color: rgb(203, 255, 227);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.child {
+    display: flex;
+}
+
+.mainInfo {
+    display: flex;
+    gap: 10px;
 }
