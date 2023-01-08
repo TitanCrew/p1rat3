@@ -94,12 +94,12 @@ def parse_data(json_data):
             try:
                 port_template['version'] = port['service']['@version']
             except KeyError:
-                port_template['version'] = 'Version Not found'
+                port_template['version'] = ''
 
             try:
                 port_template['product'] = port['service']['@product']
             except KeyError:
-                port_template['product'] = 'Product Not found'
+                port_template['product'] = ''
 
             # Additional Details
 
