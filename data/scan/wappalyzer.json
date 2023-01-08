@@ -1,1 +1,333 @@
-"[{\"url\":\"http://tryhackme.com\",\"technologies\":[{\"slug\":\"node-js\",\"name\":\"Node.js\",\"cpe\":\"cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*\",\"versions\":[],\"categories\":[{\"id\":27,\"slug\":\"programming-languages\",\"name\":\"Programming languages\"}],\"confirmedAt\":1673164984},{\"slug\":\"paths-js\",\"name\":\"Paths.js\",\"versions\":[],\"categories\":[{\"id\":25,\"slug\":\"javascript-graphics\",\"name\":\"JavaScript graphics\"}],\"confirmedAt\":1673164984},{\"slug\":\"amazon-alb\",\"name\":\"Amazon ALB\",\"versions\":[],\"categories\":[{\"id\":65,\"slug\":\"load-balancers\",\"name\":\"Load balancers\"}],\"confirmedAt\":1673164984},{\"slug\":\"bootstrap\",\"name\":\"Bootstrap\",\"cpe\":\"cpe:2.3:a:getbootstrap:bootstrap:*:*:*:*:*:*:*:*\",\"versions\":[\"4.3.1\"],\"categories\":[{\"id\":66,\"slug\":\"ui-frameworks\",\"name\":\"UI frameworks\"}],\"confirmedAt\":1673164984},{\"slug\":\"vimeo\",\"name\":\"Vimeo\",\"versions\":[],\"categories\":[{\"id\":14,\"slug\":\"video-players\",\"name\":\"Video players\"}],\"confirmedAt\":1673164984},{\"slug\":\"animate-css\",\"name\":\"Animate.css\",\"versions\":[\"3.7.2\"],\"categories\":[{\"id\":66,\"slug\":\"ui-frameworks\",\"name\":\"UI frameworks\"}],\"confirmedAt\":1673164984},{\"slug\":\"amazon-web-services\",\"name\":\"Amazon Web Services\",\"versions\":[],\"categories\":[{\"id\":62,\"slug\":\"paas\",\"name\":\"PaaS\"}],\"confirmedAt\":1673164984},{\"slug\":\"express\",\"name\":\"Express\",\"cpe\":\"cpe:2.3:a:expressjs:express:*:*:*:*:*:*:*:*\",\"versions\":[],\"categories\":[{\"id\":18,\"slug\":\"web-frameworks\",\"name\":\"Web frameworks\"},{\"id\":22,\"slug\":\"web-servers\",\"name\":\"Web servers\"}],\"confirmedAt\":1673164984},{\"slug\":\"slick\",\"name\":\"Slick\",\"versions\":[],\"categories\":[{\"id\":59,\"slug\":\"javascript-libraries\",\"name\":\"JavaScript libraries\"}],\"confirmedAt\":1673164984},{\"slug\":\"osano\",\"name\":\"Osano\",\"versions\":[],\"categories\":[{\"id\":67,\"slug\":\"cookie-compliance\",\"name\":\"Cookie compliance\"}],\"confirmedAt\":1673164984},{\"slug\":\"jquery\",\"name\":\"jQuery\",\"cpe\":\"cpe:2.3:a:jquery:jquery:*:*:*:*:*:*:*:*\",\"versions\":[\"3.5.1\"],\"categories\":[{\"id\":59,\"slug\":\"javascript-libraries\",\"name\":\"JavaScript libraries\"}],\"confirmedAt\":1673164984},{\"slug\":\"google-analytics\",\"name\":\"Google Analytics\",\"versions\":[],\"categories\":[{\"id\":10,\"slug\":\"analytics\",\"name\":\"Analytics\"}],\"confirmedAt\":1673164984},{\"slug\":\"recaptcha\",\"name\":\"reCAPTCHA\",\"versions\":[],\"categories\":[{\"id\":16,\"slug\":\"security\",\"name\":\"Security\"}],\"confirmedAt\":1673164984},{\"slug\":\"cdnjs\",\"name\":\"cdnjs\",\"versions\":[],\"categories\":[{\"id\":31,\"slug\":\"cdn\",\"name\":\"CDN\"}],\"confirmedAt\":1673164984},{\"slug\":\"cloudflare\",\"name\":\"Cloudflare\",\"versions\":[],\"categories\":[{\"id\":31,\"slug\":\"cdn\",\"name\":\"CDN\"}],\"confirmedAt\":1673164984},{\"slug\":\"popper\",\"name\":\"Popper\",\"versions\":[],\"categories\":[{\"id\":19,\"slug\":\"miscellaneous\",\"name\":\"Miscellaneous\"}],\"confirmedAt\":1673164984},{\"slug\":\"open-graph\",\"name\":\"Open Graph\",\"versions\":[],\"categories\":[{\"id\":19,\"slug\":\"miscellaneous\",\"name\":\"Miscellaneous\"}],\"confirmedAt\":1673164984}]}]"
+[
+    {
+        "url": "https://www.iitism.ac.in",
+        "technologies": [
+            {
+                "slug": "php",
+                "name": "PHP",
+                "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                "versions": [
+                    "7.4.30"
+                ],
+                "categories": [
+                    {
+                        "id": 27,
+                        "slug": "programming-languages",
+                        "name": "Programming languages"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "facebook-login",
+                "name": "Facebook Login",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 69,
+                        "slug": "authentication",
+                        "name": "Authentication"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "centos",
+                "name": "CentOS",
+                "cpe": "cpe:2.3:o:centos:centos:*:*:*:*:*:*:*:*",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 28,
+                        "slug": "operating-systems",
+                        "name": "Operating systems"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "youtube",
+                "name": "YouTube",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 14,
+                        "slug": "video-players",
+                        "name": "Video players"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "laravel",
+                "name": "Laravel",
+                "cpe": "cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 18,
+                        "slug": "web-frameworks",
+                        "name": "Web frameworks"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "codeigniter",
+                "name": "CodeIgniter",
+                "cpe": "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 18,
+                        "slug": "web-frameworks",
+                        "name": "Web frameworks"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "bootstrap",
+                "name": "Bootstrap",
+                "cpe": "cpe:2.3:a:getbootstrap:bootstrap:*:*:*:*:*:*:*:*",
+                "versions": [
+                    "3.3.7"
+                ],
+                "categories": [
+                    {
+                        "id": 66,
+                        "slug": "ui-frameworks",
+                        "name": "UI frameworks"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "openssl",
+                "name": "OpenSSL",
+                "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+                "versions": [
+                    "1.0.2k"
+                ],
+                "categories": [
+                    {
+                        "id": 33,
+                        "slug": "web-server-extensions",
+                        "name": "Web server extensions"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "azure",
+                "name": "Azure",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 62,
+                        "slug": "paas",
+                        "name": "PaaS"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "apache",
+                "name": "Apache",
+                "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+                "versions": [
+                    "2.4.6"
+                ],
+                "categories": [
+                    {
+                        "id": 22,
+                        "slug": "web-servers",
+                        "name": "Web servers"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "cloudflare",
+                "name": "Cloudflare",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 31,
+                        "slug": "cdn",
+                        "name": "CDN"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "twitter",
+                "name": "Twitter",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 5,
+                        "slug": "widgets",
+                        "name": "Widgets"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "jquery-cdn",
+                "name": "jQuery CDN",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 31,
+                        "slug": "cdn",
+                        "name": "CDN"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "google-hosted-libraries",
+                "name": "Google Hosted Libraries",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 31,
+                        "slug": "cdn",
+                        "name": "CDN"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "google-font-api",
+                "name": "Google Font API",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 17,
+                        "slug": "font-scripts",
+                        "name": "Font scripts"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "azure-monitor",
+                "name": "Azure Monitor",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 10,
+                        "slug": "analytics",
+                        "name": "Analytics"
+                    },
+                    {
+                        "id": 92,
+                        "slug": "performance",
+                        "name": "Performance"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "twitter-ads",
+                "name": "Twitter Ads",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 36,
+                        "slug": "advertising",
+                        "name": "Advertising"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "microsoft-application-insights",
+                "name": "Microsoft Application Insights",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 78,
+                        "slug": "rum",
+                        "name": "RUM"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "jquery-migrate",
+                "name": "jQuery Migrate",
+                "versions": [
+                    "3.0.1"
+                ],
+                "categories": [
+                    {
+                        "id": 59,
+                        "slug": "javascript-libraries",
+                        "name": "JavaScript libraries"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "jquery",
+                "name": "jQuery",
+                "cpe": "cpe:2.3:a:jquery:jquery:*:*:*:*:*:*:*:*",
+                "versions": [
+                    "3.3.1"
+                ],
+                "categories": [
+                    {
+                        "id": 59,
+                        "slug": "javascript-libraries",
+                        "name": "JavaScript libraries"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "font-awesome",
+                "name": "Font Awesome",
+                "versions": [
+                    "4.7.0"
+                ],
+                "categories": [
+                    {
+                        "id": 17,
+                        "slug": "font-scripts",
+                        "name": "Font scripts"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "cdnjs",
+                "name": "cdnjs",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 31,
+                        "slug": "cdn",
+                        "name": "CDN"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            },
+            {
+                "slug": "recaptcha",
+                "name": "reCAPTCHA",
+                "versions": [],
+                "categories": [
+                    {
+                        "id": 16,
+                        "slug": "security",
+                        "name": "Security"
+                    }
+                ],
+                "confirmedAt": 1673172116
+            }
+        ]
+    }
+]

@@ -9,20 +9,55 @@
 </head>
 <body>
     <div class="mainContainer">
-        <div class="nmapScan scans">
-            <p class="title nmap-title">Port Scan</p>
-            <div class="resContainer">
-                <!-- {'port': '21', 'protocol': 'tcp', 'state': 'open', 'service': 'ftp', 'version': '3.0.3', 'product': 'vsftpd'} -->
-                {% for indPort in portInfo %}
-                <div class="indPortInfo">
-                    <div class="mainInfo">
-                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/3892/3892472.png" width="25px" /><p>{{ indPort['port'] }}</p></div>
-                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/128/7653/7653849.png" width="25px" /><p>{{ indPort['protocol'] }}</p></div>
-                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/4207/4207230.png" width="25px" /><p>{{ indPort['service'] }}</p></div>
+        <p id="resTitle">P1RAT3</p>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="nmapScan scans">
+                <p class="title nmap-title">Port Scan</p>
+                <div class="resContainer nmapCont">
+                    <!-- {'port': '21', 'protocol': 'tcp', 'state': 'open', 'service': 'ftp', 'version': '3.0.3', 'product': 'vsftpd'} -->
+                    {% for indPort in portInfo %}
+                    <div class="indPortInfo">
+                        <div class="mainInfo">
+                            <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/3892/3892472.png" width="25px" /><p>{{ indPort['port'] }}</p></div>
+                            <div class="child"><img src="https://cdn-icons-png.flaticon.com/128/7653/7653849.png" width="25px" /><p>{{ indPort['protocol'] }}</p></div>
+                            <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/4207/4207230.png" width="25px" /><p>{{ indPort['service'] }}</p></div>
+                        </div>
+                        <div class="prodInfo">{{ indPort['product'] }}, {{ indPort['version'] }}</div>
                     </div>
-                    <div class="prodInfo">{{ indPort['product'] }}, {{ indPort['version'] }}</div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+            </div>
+            <div class="wappalyzerScan scans">
+                <p class="title wapp-title">Tech Scan</p>
+                <div class="resContainer wappCont">
+                    <!-- {
+                        "slug": "php",
+                        "name": "PHP",
+                        "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                        "versions": [
+                            "7.4.30"
+                        ],
+                        "categories": [
+                            {
+                                "id": 27,
+                                "slug": "programming-languages",
+                                "name": "Programming languages"
+                            }
+                        ],
+                        "confirmedAt": 1673172116
+                    } -->
+                    {% for indTech in wapp_res %}
+                    <div class="indWappInfo">
+                        <div style="display: flex; justify-content: left; align-items: center; gap: 10px;">
+                            <img src="static/icons/{{ iconMap[indTech['name']] }}" width="20px" />
+                            <span class="technology">{{ indTech['name'] }}</span>
+                            {% if indTech["versions"]|length != 0 %}
+                            <span class="version">{{ indTech["versions"][0] }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         <div class="osScan scans">
