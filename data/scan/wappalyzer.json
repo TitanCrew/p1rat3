@@ -1,6 +1,6 @@
 [
     {
-        "url": "https://www.iitism.ac.in",
+        "url": "https://www.iitism.ac.in/iitismnew/",
         "technologies": [
             {
                 "slug": "php",
@@ -16,7 +16,7 @@
                         "name": "Programming languages"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "facebook-login",
@@ -29,7 +29,7 @@
                         "name": "Authentication"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "centos",
@@ -43,7 +43,7 @@
                         "name": "Operating systems"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "youtube",
@@ -56,7 +56,7 @@
                         "name": "Video players"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "laravel",
@@ -70,21 +70,7 @@
                         "name": "Web frameworks"
                     }
                 ],
-                "confirmedAt": 1673172116
-            },
-            {
-                "slug": "codeigniter",
-                "name": "CodeIgniter",
-                "cpe": "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*",
-                "versions": [],
-                "categories": [
-                    {
-                        "id": 18,
-                        "slug": "web-frameworks",
-                        "name": "Web frameworks"
-                    }
-                ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "bootstrap",
@@ -100,7 +86,7 @@
                         "name": "UI frameworks"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "openssl",
@@ -116,7 +102,7 @@
                         "name": "Web server extensions"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "azure",
@@ -129,7 +115,7 @@
                         "name": "PaaS"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "apache",
@@ -145,7 +131,7 @@
                         "name": "Web servers"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "cloudflare",
@@ -158,7 +144,7 @@
                         "name": "CDN"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "twitter",
@@ -171,7 +157,7 @@
                         "name": "Widgets"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "jquery-cdn",
@@ -184,7 +170,7 @@
                         "name": "CDN"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "google-hosted-libraries",
@@ -197,7 +183,7 @@
                         "name": "CDN"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "google-font-api",
@@ -210,7 +196,7 @@
                         "name": "Font scripts"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "azure-monitor",
@@ -228,7 +214,7 @@
                         "name": "Performance"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "twitter-ads",
@@ -241,7 +227,7 @@
                         "name": "Advertising"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "microsoft-application-insights",
@@ -254,7 +240,7 @@
                         "name": "RUM"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "jquery-migrate",
@@ -269,7 +255,7 @@
                         "name": "JavaScript libraries"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "jquery",
@@ -285,7 +271,7 @@
                         "name": "JavaScript libraries"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "font-awesome",
@@ -300,7 +286,7 @@
                         "name": "Font scripts"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "cdnjs",
@@ -313,7 +299,7 @@
                         "name": "CDN"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             },
             {
                 "slug": "recaptcha",
@@ -326,7 +312,7 @@
                         "name": "Security"
                     }
                 ],
-                "confirmedAt": 1673172116
+                "confirmedAt": 1673191992
             }
         ]
     }
