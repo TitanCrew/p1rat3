@@ -9,24 +9,24 @@
 </head>
 <body>
     <div class="mainContainer">
-        <div class="osScan scans">
-            <p class="title">Detected OS :- {{ osInfo['os'] }}</p>
-        </div>
         <div class="nmapScan scans">
-            <p class="title nmap-title">Nmap Scan results</p>
+            <p class="title nmap-title">Port Scan</p>
             <div class="resContainer">
                 <!-- {'port': '21', 'protocol': 'tcp', 'state': 'open', 'service': 'ftp', 'version': '3.0.3', 'product': 'vsftpd'} -->
                 {% for indPort in portInfo %}
                 <div class="indPortInfo">
-                    <div>Port: {{ indPort['port'] }}</div>
-                    <div>Protocol: {{ indPort['protocol'] }}</div>
-                    <div>State: {{ indPort['state'] }}</div>
-                    <div>Service: {{ indPort['service'] }}</div>
-                    <div>Version: {{ indPort['version'] }}</div>
-                    <div>Product: {{ indPort['product'] }}</div>
+                    <div class="mainInfo">
+                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/3892/3892472.png" width="25px" /><p>{{ indPort['port'] }}</p></div>
+                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/128/7653/7653849.png" width="25px" /><p>{{ indPort['protocol'] }}</p></div>
+                        <div class="child"><img src="https://cdn-icons-png.flaticon.com/512/4207/4207230.png" width="25px" /><p>{{ indPort['service'] }}</p></div>
+                    </div>
+                    <div class="prodInfo">{{ indPort['product'] }}, {{ indPort['version'] }}</div>
                 </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="osScan scans">
+            <p class="title">Detected OS: {{ osInfo['os'] }}</p>
         </div>
     </div>
 </body>
