@@ -14,9 +14,12 @@ def home():
 @app.route('/', methods = ["POST"])
 def submit():
     value = request.form.get('data').strip()
+    print(f"[+] GOT REQUEST TO SCAN {value}")
     try:
         target = socket.gethostbyname(value)
+        print(f'[+] TARGET RESOLVED {value} -> {target}')
     except:
+        print(f'[-] ERROR IN RESOLVING {value}')
         return "Cant resolve host"
     result = port_scan.rustscan(target)
     os.remove("data/scan/nmap.xml")
