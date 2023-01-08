@@ -512,5 +512,8 @@ def final_port_data():
         data_dict = xmltodict.parse(xml_file.read())
         xml_file.close()
 
-    print(json.dumps(data_dict, indent=4))
+    with open('data/scan/port_scan.json', 'w') as f:
+        f.write(json.dumps(data_dict, indent=4))
+        f.close()
+        
     return parse_data(data_dict)

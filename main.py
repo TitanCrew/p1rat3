@@ -16,10 +16,12 @@ def home():
 @app.route('/', methods = ["POST"])
 def submit():
     value = request.form.get('data').strip()
-    target = value
+    print(f"[+] GOT REQUEST TO SCAN {value}")
     try:
-        target = socket.gethostbyname(value.split("//")[1])
+        target = socket.gethostbyname(value)
+        print(f'[+] TARGET RESOLVED {value} -> {target}')
     except:
+        print(f'[-] ERROR IN RESOLVING {value}')
         return "Cant resolve host"
     result = port_scan.rustscan(target)
     wapp_res = wapp.get_stack(value)
@@ -29,4 +31,4 @@ def submit():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=7000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

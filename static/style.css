@@ -17,6 +17,10 @@ body {
     position: relative;
     margin: 0px; padding: 0px;
     min-height: 100vh; width: 100vw;
+<<<<<<< HEAD
+=======
+    height: fit-content;
+>>>>>>> dbad54b5eda923e05a213534da95882055d50350
     display: flex;
     flex-direction: column;
     justify-content: top;
