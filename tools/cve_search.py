@@ -6,7 +6,7 @@ def list_vuln():
 
     file = open('data/scan/wappalyzer.json', 'r').read()
     json_data = json.loads(file)
-    final = [{"url": json_data['url'], "technologies": []}]
+    final = [{"url": json_data[0]['url'], "technologies": []}]
 
     try:
         template = json_data[0]['technologies']
@@ -17,6 +17,7 @@ def list_vuln():
         block['vulnerable'] = 'no'
         if len(block['versions']) != 0 and len(block['name']) != 0:
             command = f"searchsploit -t -s --json {block['name']} {block['versions'][0]}"
+            print(command)
 
             output = subprocess.run(command, shell=True, capture_output=True)
 
@@ -25,4 +26,4 @@ def list_vuln():
 
         final[0]['technologies'].append(block)
 
-    file = open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))
+    open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))

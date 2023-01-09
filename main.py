@@ -38,8 +38,7 @@ def submit():
     result = port_scan.rustscan(target)
     wapp_res = wapp.get_stack(value)
     iconMap = json.loads(open("static/map.json").read())
-    # search_for_me
-    # os.remove("data/scan/nmap.xml")
+    os.remove("data/scan/nmap.xml")
     return render_template("result/index.html", osInfo = result['os'], portInfo = result['ports'], wapp_res = wapp_res[0]["technologies"], iconMap = iconMap)
 
 

@@ -1,35 +1,38 @@
-FROM --platform=amd64 ubuntu:20.04
+FROM --platform=amd64 kalilinux/kali-rolling
 
-COPY ./p1rat3/install-nix.sh .
-RUN mkdir /p1rat3
-ADD p1rat3 /p1rat3
-RUN apt update -y 
+RUN apt update -y
+
 RUN apt install python3 -y 
 RUN apt install python3-pip -y
-RUN pip3 install Flask
-RUN apt install nmap -y
-RUN apt install gobuster -y 
-RUN apt install iputils-ping -y 
-RUN apt install curl -y 
-RUN apt install wget -y 
-RUN apt install whois -y 
-RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install dnsutils -y 
-RUN apt install unzip -y 
-RUN apt install zip -y 
-RUN apt install p7zip -y 
+
 RUN apt install git -y
-RUN echo "root:pirates" | chpasswd
+RUN apt install iputils-ping -y
+RUN apt install curl -y
+RUN apt install wget -y
+RUN apt install unzip -y
+RUN apt install zip -y
+RUN apt install dpkg -y
 
-RUN chmod +x install-nix.sh
-RUN bash install-nix.sh
+RUN curl https://sh.rustup.rs --output rust.rs
+RUN chmod +x rust.rs
+RUN /rust.rs -y
+RUN git clone https://github.com/RustScan/RustScan.git
+WORKDIR /RustScan
+RUN $HOME/.cargo/bin/cargo build --release
+RUN mv target/release/rustscan /usr/bin
+WORKDIR /
 
-# Change 
-RUN wget https://apt.metasploit.com/pool/main/m/metasploit-framework/metasploit-framework_6.2.35%2B20230106112648~1rapid7-1_amd64.deb
-RUN dpkg -i metasploit-framework_6.2.35+20230106112648~1rapid7-1_amd64.deb
+RUN apt install nmap -y
+RUN apt install gobuster -y
+RUN apt install exploitdb -y
 
-# RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install openssh-server -yq
-# COPY ./sshd_config /etc/ssh/
-# RUN service ssh start
-EXPOSE 1-65535
+# RUN apt install whois -y
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install dnsutils -y
+RUN git clone https://github.com/TitanCrew/p1rat3/
+WORKDIR /p1rat3
+RUN pip3 install -r requirements.txt
+ENV wappalyzer_api=V27thSllZy85ohAn9DYi83xlQjICTGS65f2ZKOhk
 
-CMD ["python3 /p1rat3/main.py","-D"]
+EXPOSE 8000
+
+CMD ["python3 main.py","-D"]
