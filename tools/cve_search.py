@@ -4,15 +4,15 @@ import subprocess
 
 def list_vuln():
 
-    file = open('data/scan/wappalyzer.json', 'r').read()
+    file = open('/p1rat3/data/scan/wappalyzer.json', 'r').read()
     json_data = json.loads(file)
-    final = [{"url": json_data[0]['url'], "technologies": []}]
+    final = [{"url": "", "technologies": []}]
 
     try:
         template = json_data[0]['technologies']
     except KeyError:
         print("[-] ERROR IN VULNERABILITY SCAN")
-        open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))
+        open('/p1rat3/data/scan/wappalyzer.json', 'w').write(json.dumps(final))
         return
 
     for block in template:
@@ -30,6 +30,6 @@ def list_vuln():
 
         final[0]['technologies'].append(block)
 
-    open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))
+    open('/p1rat3/data/scan/wappalyzer.json', 'w').write(json.dumps(final))
     print("[+] VULNERABILITY SCAN SUCCESSFUL")
     return

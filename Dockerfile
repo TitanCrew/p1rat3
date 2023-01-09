@@ -1,4 +1,4 @@
-FROM --platform=amd64 kalilinux/kali-rolling
+FROM kalilinux/kali-rolling
 
 RUN apt update -y
 
@@ -25,11 +25,11 @@ RUN apt install exploitdb -y
 RUN apt install sudo -y
 
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install dnsutils -y
-RUN git clone https://github.com/TitanCrew/p1rat3/
+RUN mkdir p1rat3
+COPY . /p1rat3
 WORKDIR /p1rat3
 RUN pip3 install -r requirements.txt
-ENV wappalyzer_api=V27thSllZy85ohAn9DYi83xlQjICTGS65f2ZKOhk
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1/
 
 WORKDIR /
 

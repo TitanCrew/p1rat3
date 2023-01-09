@@ -507,11 +507,11 @@ def parse_data(json_data):
 
 
 def final_port_data():
-    with open("data/scan/nmap.xml") as xml_file:
+    with open("/p1rat3/data/scan/nmap.xml") as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
         xml_file.close()
 
-    with open('data/scan/port_scan.json', 'w') as f:
+    with open('/p1rat3/data/scan/port_scan.json', 'w') as f:
         f.write(json.dumps(data_dict, indent=4))
         f.close()
     print("[+] PORT SCAN PARSE SUCCESSFUL")

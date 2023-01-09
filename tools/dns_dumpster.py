@@ -41,7 +41,7 @@ def get_file_data(target):
 
         file = session.get(link, headers={"Referer": "https://dnsdumpster.com/"}).content
 
-        with open('data/scan/dns_dumpster/dns_data.xlsx', 'wb') as f:
+        with open('/p1rat3/data/scan/dns_dumpster/dns_data.xlsx', 'wb') as f:
             f.write(file)
             f.close()
 
@@ -52,7 +52,7 @@ def get_file_data(target):
 
 
 def parse_excel_data():
-    path = 'data/scan/dns_dumpster/dns_data.xlsx'
+    path = '/p1rat3/data/scan/dns_dumpster/dns_data.xlsx'
     workbook = openpyxl.load_workbook(path)
     sheet = workbook.active
 

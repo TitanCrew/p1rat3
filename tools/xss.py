@@ -4,21 +4,21 @@ import subprocess
 
 def check_xss(url):
 
-    command = f"python3 tools/PwnXSS/pwnxss.py -u {url}"
+    command = f"python3 /p1rat3/tools/PwnXSS/pwnxss.py -u {url}"
     initial_output = subprocess.run(command, shell=True, capture_output=True)
     
-    with open('data/xss/xss_data', 'wb') as f:
+    with open('/p1rat3/data/xss/xss_data', 'wb') as f:
         f.write(initial_output.stdout)
         f.close()
 
-    command = "grep -i -E 'CRITICAL.*POST' data/xss/xss_data > data/xss/post ; grep -i -E 'CRITICAL.*GET' data/xss/xss_data > data/xss/get"
+    command = "grep -i -E 'CRITICAL.*POST' /p1rat3/data/xss/xss_data > /p1rat3/data/xss/post ; grep -i -E 'CRITICAL.*GET' /p1rat3/data/xss/xss_data > /p1rat3/data/xss/get"
 
     subprocess.run(command, shell=True)
 
-    post_file = open("data/xss/post","r")
-    get_file = open("data/xss/get", "r")
-    out_post_file = open("data/xss/post.json","w")
-    out_get_file = open("data/xss/get.json", "w")
+    post_file = open("/p1rat3/data/xss/post","r")
+    get_file = open("/p1rat3/data/xss/get", "r")
+    out_post_file = open("/p1rat3/data/xss/post.json","w")
+    out_get_file = open("/p1rat3/data/xss/get.json", "w")
 
 
     line_post = 'q'

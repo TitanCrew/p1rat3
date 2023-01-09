@@ -1,13 +1,12 @@
 from flask import Flask, render_template, redirect, request
 from tools import port_scan, xss, cve_search
 from tools.wappalyzer import lookup
-import os
 import socket
 import json
 import re
 
 app = Flask(__name__)
-wapp = lookup(os.getenv("wappalyzer_api"))
+wapp = lookup("V27thSllZy85ohAn9DYi83xlQjICTGS65f2ZKOhk")
 
 
 @app.route("/", methods=["GET"])
@@ -47,9 +46,9 @@ def submit():
     print("[+] XSS SCAN STARTED")
     xss.check_xss(value)
 
-    iconMap = json.loads(open("static/map.json").read())
-    getXSS = json.loads(open("data/xss/get.json").read())
-    postXSS = json.loads(open("data/xss/post.json").read())
+    iconMap = json.loads(open("/p1rat3/static/map.json").read())
+    getXSS = json.loads(open("/p1rat3/data/xss/get.json").read())
+    postXSS = json.loads(open("/p1rat3/data/xss/post.json").read())
 
     return render_template("result/index.html", osInfo=result['os'], portInfo=result['ports'],
                            wapp_res=wapp_res[0]["technologies"], iconMap=iconMap, getXSS=getXSS, postXSS=postXSS)

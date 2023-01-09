@@ -3,12 +3,12 @@ import json
 
 # url = input("URL: ")
 def subdomain(domain):
-    cmd = f"gobuster dns -d {domain} -w tools/subdomains-top1million-5000.txt -t 100  > data/subdomain_takeover/subdomain_tmp.txt"
+    cmd = f"gobuster dns -d {domain} -w /p1rat3/tools/subdomains-top1million-5000.txt -t 100  > /p1rat3/data/subdomain_takeover/subdomain_tmp.txt"
 
     print(subprocess.run(cmd, shell=True, capture_output=True)
 )
-    with open("data/subdomain_takeover/output_sub_domain","w") as outfile:
-        lines = (open("data/subdomain_takeover/subdomain_tmp.txt","r")).readlines()
+    with open("/p1rat3/data/subdomain_takeover/output_sub_domain","w") as outfile:
+        lines = (open("/p1rat3/data/subdomain_takeover/subdomain_tmp.txt","r")).readlines()
 
         
         for line in lines:
