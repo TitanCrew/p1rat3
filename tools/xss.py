@@ -4,7 +4,7 @@ import subprocess
 
 def check_xss(url):
 
-    command = f"python3 PwnXSS/pwnxss.py -u {url}"
+    command = f"python3 tools/PwnXSS/pwnxss.py -u {url}"
     initial_output = subprocess.run(command, shell=True, capture_output=True)
     
     with open('data/xss/xss_data', 'wb') as f:

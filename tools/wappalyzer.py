@@ -12,6 +12,6 @@ class lookup:
         headers = {"x-api-key": self.api_key}
 
         with open("data/scan/wappalyzer.json", "w") as file:
-            json.dump(requests.get(to_fetch, headers=headers).json(), file, indent=4, separators=(",", ": "))
+            json.dump(requests.get(to_fetch, headers = headers).json(), file, indent = 4, separators=(",", ": "))
 
         return json.loads(open("data/scan/wappalyzer.json", "r").read())

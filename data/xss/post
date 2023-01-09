@@ -1,0 +1,34 @@
+[[1;33m09:41:58[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:41:58[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>prompt(5000/200)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:00[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:00[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:07[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:07[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:11[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:11[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:16[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:16[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:32[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:32[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:36[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:36[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:39[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:39[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:42[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:42[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:43[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:43[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:46[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:46[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/guestbook.php
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Post data: {'name': '<script>console.log(5000/3000)</script>', 'submit': 'submit'}
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:48[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:53[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:53[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/secured/newuser.php
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Post data: {'uuname': '<script>console.log(5000/3000)</script>', 'upass': '<script>console.log(5000/3000)</script>', 'upass2': '<script>console.log(5000/3000)</script>', 'urname': '<script>console.log(5000/3000)</script>', 'ucc': '<script>console.log(5000/3000)</script>', 'uemail': '<script>console.log(5000/3000)</script>', 'uphone': '<script>console.log(5000/3000)</script>', 'signup': 'signup'}
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:55[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
+[[1;33m09:42:59[0m] [[1;31mCRITICAL[0m] Detected XSS (POST) at http://testphp.vulnweb.com/search.php?test=query
+[[1;33m09:42:59[0m] [[1;31mCRITICAL[0m] Post data: {'searchFor': '<script>console.log(5000/3000)</script>', 'goButton': 'goButton'}
