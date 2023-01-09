@@ -17,7 +17,7 @@ class lookup:
             output = [{"url": "", "technologies": []}]
             with open("/p1rat3/data/scan/wappalyzer.json", "w") as file:
                 json.dump(output, file, indent=4, separators=(",", ": "))
-            return 
+            return
 
         try:
             k = output[0]
