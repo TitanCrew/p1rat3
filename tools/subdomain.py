@@ -5,8 +5,8 @@ import json
 def subdomain(domain):
     cmd = f"gobuster dns -d {domain} -w tools/subdomains-top1million-5000.txt -t 100  > data/subdomain_takeover/subdomain_tmp.txt"
 
-    subprocess.run(cmd, shell=True)
-
+    print(subprocess.run(cmd, shell=True, capture_output=True)
+)
     with open("data/subdomain_takeover/output_sub_domain","w") as outfile:
         lines = (open("data/subdomain_takeover/subdomain_tmp.txt","r")).readlines()
 
@@ -28,3 +28,4 @@ def subdomain(domain):
 
 
         outfile.close()
+

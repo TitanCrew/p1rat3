@@ -1,5 +1,4 @@
 import json
-
 import xmltodict
 
 
@@ -515,5 +514,5 @@ def final_port_data():
     with open('data/scan/port_scan.json', 'w') as f:
         f.write(json.dumps(data_dict, indent=4))
         f.close()
-        
+    print("[+] PORT SCAN PARSE SUCCESSFUL")
     return parse_data(data_dict)

@@ -63,3 +63,5 @@ def check_xss(url):
     json_obj = json.dumps(list(set(out_get_final)),indent=4)
     out_get_file.write(json_obj)
     out_get_file.write("\n")
+    print("[+] XSS CHECK SUCCESSFUL")
+    return

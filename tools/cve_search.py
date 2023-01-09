@@ -11,7 +11,9 @@ def list_vuln():
     try:
         template = json_data[0]['technologies']
     except KeyError:
-        raise KeyError
+        print("[-] ERROR IN VULNERABILITY SCAN")
+        open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))
+        return
 
     for block in template:
         block['vulnerable'] = 'no'
@@ -29,3 +31,5 @@ def list_vuln():
         final[0]['technologies'].append(block)
 
     open('data/scan/wappalyzer.json', 'w').write(json.dumps(final))
+    print("[+] VULNERABILITY SCAN SUCCESSFUL")
+    return
