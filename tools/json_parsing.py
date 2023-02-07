@@ -472,7 +472,8 @@ def parse_data(json_data):
                 else:
                     pass
             except KeyError:
-                print("No additional details for FTP")
+                # print("No additional details for FTP")
+                pass
 
         if port_template['service'] == "ms-wbt-server":
             port = ports
@@ -496,13 +497,13 @@ def parse_data(json_data):
                 else:
                     pass
             except KeyError:
-                print("No additional details for rdp")
+                # print("No additional details for rdp")
+                pass
 
         template['ports'].append(port_template)
     else:
         pass
 
-    print(json.dumps(template, indent=4))
     return template
 
 

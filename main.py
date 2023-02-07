@@ -4,9 +4,10 @@ from tools.wappalyzer import lookup
 import socket
 import json
 import re
+import os
 
 app = Flask(__name__)
-wapp = lookup("V27thSllZy85ohAn9DYi83xlQjICTGS65f2ZKOhk")
+wapp = lookup(os.getenv("api_key"))
 
 
 @app.route("/", methods=["GET"])
@@ -43,12 +44,17 @@ def submit():
     wapp_res = wapp.get_stack(value)
     print("[+] VULNERABILITY SCAN STARTED")
     cve_search.list_vuln()
-    print("[+] XSS SCAN STARTED")
-    xss.check_xss(value)
+    # print("[+] XSS SCAN STARTED")
+    # xss.check_xss(value)
 
     iconMap = json.loads(open("/p1rat3/static/map.json").read())
-    getXSS = json.loads(open("/p1rat3/data/xss/get.json").read())
-    postXSS = json.loads(open("/p1rat3/data/xss/post.json").read())
+    # getXSS = json.loads(open("/p1rat3/data/xss/get.json").read())
+    getXSS = []
+    postXSS = [{
+        "url": "",
+        "data": ""
+    }]
+    # postXSS = json.loads(open("/p1rat3/data/xss/post.json").read())
 
     return render_template("result/index.html", osInfo=result['os'], portInfo=result['ports'],
                            wapp_res=wapp_res[0]["technologies"], iconMap=iconMap, getXSS=getXSS, postXSS=postXSS)

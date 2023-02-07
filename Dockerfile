@@ -29,7 +29,8 @@ RUN mkdir p1rat3
 COPY . /p1rat3
 WORKDIR /p1rat3
 RUN pip3 install -r requirements.txt
-ENV PYTHONUNBUFFERED=1/
+ENV PYTHONUNBUFFERED=1
+ENV api_key=V27thSllZy85ohAn9DYi83xlQjICTGS65f2ZKOhk
 
 WORKDIR /
 
